@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7 — DOM та події</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Лабораторна робота №7</h1>
+        <p>Робота з Document Object Model. Обробка подій.</p>
+        <p>Виконав: Шкляр Захарій Іванович</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>1. Конвертер температури</h2>
+            <p>Зміни значення в одному полі, щоб автоматично отримати результат.</p>
+
+            <div class="temperature-fields">
+                <label>
+                    Температура за Фаренгейтом (°F)
+                    <input type="number" id="fahrenheit" placeholder="Введіть °F">
+                </label>
+
+                <label>
+                    Температура за Цельсієм (°C)
+                    <input type="number" id="celsius" placeholder="Введіть °C">
+                </label>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>2. Перевірка таблиці множення</h2>
+            <p class="score">Загальний рахунок: <span id="score2">0</span></p>
+            <div id="question2" class="question">Натисніть «Наступне завдання»</div>
+
+            <div class="answer-row">
+                <input type="number" id="answer2" placeholder="Ваша відповідь">
+                <button id="check2">Перевірити</button>
+            </div>
+
+            <p id="result2" class="result" aria-live="polite"></p>
+            <button id="next2">Наступне завдання</button>
+        </section>
+
+        <section class="card">
+            <h2>3. Таблиця множення з варіантами відповідей</h2>
+            <p class="score">Загальний рахунок: <span id="score3">0</span></p>
+            <div id="question3" class="question">Натисніть «Наступне завдання»</div>
+
+            <div id="options3" class="options"></div>
+
+            <p id="result3" class="result" aria-live="polite"></p>
+            <button id="next3">Наступне завдання</button>
+        </section>
+
+        <section class="card">
+            <h2>4. Галерея чоловічого одягу</h2>
+            <p>Переглядайте зображення за допомогою посилань.</p>
+            <div id="rotator" class="rotator"></div>
+        </section>
+
+        <section class="card">
+            <h2>5. Перевірка CAPTCHA</h2>
+            <p>Введіть цифри, які відображені нижче.</p>
+
+            <div id="captcha" class="captcha" aria-label="Код CAPTCHA"></div>
+
+            <div class="answer-row">
+                <input type="text" id="captchaAnswer"
+                       placeholder="Введіть код" autocomplete="off">
+                <button id="checkCaptcha">Перевірити</button>
+                <button id="refreshCaptcha" class="secondary">Оновити</button>
+            </div>
+
+            <p id="captchaResult" class="result" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Шкляр З. І. | ПІ-23-03</p>
+    </footer>
+</body>
+</html>
